@@ -49,7 +49,7 @@ class DashboardScreen extends Component {
       console.log('Device shake!');
           if(this.speed > 10 && this.moving && this.ready){
             this.incident = true
-            this.store.sendIncident(data)
+            this.store.sendIncidents(data)
           }
     });
     Location.startUpdatingLocation();
@@ -121,7 +121,7 @@ class DashboardScreen extends Component {
   }
 
   sendIncident(){
-    this.store.sendIncident(this.location)
+    this.store.sendIncidents(this.location)
   }
 
   render () {
