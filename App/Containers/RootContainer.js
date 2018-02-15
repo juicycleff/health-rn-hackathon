@@ -1,30 +1,34 @@
 import React, { Component } from 'react'
 import { View, StatusBar } from 'react-native'
-import ReduxNavigation from '../Navigation/ReduxNavigation'
-import { connect } from 'react-redux'
+import { MainNavigator, UnauthenticatedNavigator } from '../Navigation/AppNavigation'
+import { inject, observer } from 'mobx-react';
 import StartupActions from '../Redux/StartupRedux'
+import { addNavigationHelpers } from 'react-navigation'
 
 // Styles
 import styles from './Styles/RootContainerStyles'
-
+@inject('navigationStore', 'userStore')
+@observer
 class RootContainer extends Component {
+  constructor(props, context) {
+    super(props, context)
+    this.nav = this.props.navigationStore
+    this.store = this.props.userStore
+  }
   componentDidMount () {
-    this.props.startup()
+
   }
 
   render () {
     return (
       <View style={styles.applicationView}>
         <StatusBar barStyle='light-content' />
-        <ReduxNavigation />
+        {this.store.isAuthenticated ?
+          <MainNavigator screenStore={this.store} /> :
+          <UnauthenticatedNavigator screenStore={this.store}/>}
       </View>
     )
   }
 }
 
-// wraps dispatch to create nicer functions to call within our component
-const mapDispatchToProps = (dispatch) => ({
-  startup: () => dispatch(StartupActions.startup())
-})
-
-export default connect(null, mapDispatchToProps)(RootContainer)
+export default RootContainer

@@ -1,6 +1,7 @@
 import Fonts from './Fonts'
 import Metrics from './Metrics'
 import Colors from './Colors'
+import {StyleSheet, Dimensions, Platform} from 'react-native'
 
 // This file is for a reusable grouping of Theme items.
 // Similar to an XML fragment layout in Android
@@ -74,6 +75,35 @@ const ApplicationStyles = {
     borderColor: Colors.ember,
     alignItems: 'center',
     textAlign: 'center'
+  },
+  inputs: {
+    marginTop: 15,
+    flex: 1,
+  },
+  inputContainer: {
+    padding: 10,
+    marginHorizontal: 15,
+    alignItems: 'center',
+    justifyContent: 'center',
+    height: 40,
+    borderBottomWidth: Platform.OS === 'ios' ? 1 : 0,
+    borderColor: Platform.OS === 'ios' ? '#DDD' : 'transparent'
+  },
+  input: {
+    position: 'absolute',
+    left: 5,
+    top: 0,
+    right: 5,
+    bottom: 0,
+    height: 40,
+    fontSize: 18,
+    padding: 5
+  },
+  greyFont: {
+    color: '#555'
+  },
+  darkFont: {
+    color: '#000'
   }
 }
 
