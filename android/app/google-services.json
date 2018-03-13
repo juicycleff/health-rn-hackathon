@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "538749004457",
+    "firebase_url": "https://kinghealth-131ff.firebaseio.com",
+    "project_id": "kinghealth-131ff",
+    "storage_bucket": "kinghealth-131ff.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:538749004457:android:39c413e1d7aee53d",
+        "android_client_info": {
+          "package_name": "com.boldsofts.health"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "538749004457-0uk7t3ti1h8gkrg7ef4tmvf488gi4k8b.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.boldsofts.health",
+            "certificate_hash": "a7c84113b8840fa8c5b846948888beacfc9fb2be"
+          }
+        },
+        {
+          "client_id": "538749004457-oimb8rnk32s6vgmq3at2132tg8l8tr6c.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBOsQvz-eWSHQPgc9YqeGfsUjuNA5fA4fE"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "538749004457-oimb8rnk32s6vgmq3at2132tg8l8tr6c.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

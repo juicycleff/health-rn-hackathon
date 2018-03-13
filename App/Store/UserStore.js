@@ -6,8 +6,15 @@ import feathers from '@feathersjs/client'
 import socketio from '@feathersjs/socketio-client'
 import SendSMS from 'react-native-sms'
 import authentication from '@feathersjs/authentication-client'
+import RNPusherPushNotifications from 'react-native-pusher-push-notifications'
 const PLACEHOLDER = 'https://raw.githubusercontent.com/feathersjs/feathers-chat/master/public/placeholder.png';
 const API_URL = 'https://soshealth.now.sh'
+
+
+// Get your interest
+const interest = "incident";
+// Set your app key and register for push
+RNPusherPushNotifications.setAppKey("bebfb23c-66a9-4db2-804d-b3dba7623ad7");
 
 @autobind
 class Store {
@@ -15,7 +22,7 @@ class Store {
   @observable isAuthenticated = false
   @observable isConnecting = false
   @observable user = null
-  @observable networkYes = false
+  @observable networkYes = true
   @observable messages = []
   @observable hasMoreMessages = false
   @observable skip = 0
@@ -49,7 +56,7 @@ class Store {
     const dispatchConnected = isConnected => this.networkYes = isConnected;
 
     NetInfo.isConnected.fetch().then().done(() => {
-      NetInfo.isConnected.addEventListener('change', dispatchConnected);
+      NetInfo.isConnected.addEventListener('connectionChange', dispatchConnected);
     });
   }
 
@@ -197,11 +204,13 @@ class Store {
 
 
   sendIncidents(data) {
+
     let tempData = {
       ...data,
       owner: this.user._id
     }
-    if(networkYes){
+
+    if(this.networkYes){
       this.app.service('atom').create(tempData).then(result => {
         console.log('Incident sent created!');
         Alert.alert('Send Incident', 'Incident sent');

@@ -69,6 +69,7 @@ class LoginScreen extends Component {
     };
 
     return (
+      <ScrollView>
       <View flex>
         <Image source={Images.background} style={styles.backgroundImage} resizeMode='stretch' />
 
@@ -112,6 +113,7 @@ class LoginScreen extends Component {
           </TouchableWithoutFeedback>
         </View>
       </View>
+      </ScrollView>
     )
   }
 }

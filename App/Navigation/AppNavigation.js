@@ -55,4 +55,16 @@ export const MainNavigator = StackNavigator({
    }
 });
 
+export const ParamedicNavigator = StackNavigator({
+  Incidents: { screen: Incidents },
+  About: { screen: AboutScreen },
+  Settings: { screen: SettingsScreen },
+}, {
+   // Default config for all screens
+   headerMode: 'card',
+   initialRouteName: 'Incidents',
+   navigationOptions: {
+     headerStyle: styles.header
+   }
+});
 export default PrimaryNav

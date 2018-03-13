@@ -1,8 +1,10 @@
-package com.healthx;
+package com.boldsofts.health;
 
 import android.app.Application;
 
 import com.facebook.react.ReactApplication;
+import com.tkporter.sendsms.SendSMSPackage;
+import com.b8ne.RNPusherPushNotifications.RNPusherPushNotificationsPackage;
 import com.oblador.vectoricons.VectorIconsPackage;
 import com.jadsonlourenco.RNShakeEvent.RNShakeEventPackage;
 import com.sensors.RNSensorsPackage;
@@ -31,9 +33,10 @@ public class MainApplication extends Application implements ReactApplication {
     protected List<ReactPackage> getPackages() {
       return Arrays.<ReactPackage>asList(
           new MainReactPackage(),
+            SendSMSPackage.getInstance(),
+            new RNPusherPushNotificationsPackage(),
             new VectorIconsPackage(),
             new RNLocation(),
-            SendSMSPackage.getInstance(),
             new RNShakeEventPackage(),
             new RNSensorsPackage(),
             new ReactNativeConfigPackage(),
@@ -52,12 +55,6 @@ public class MainApplication extends Application implements ReactApplication {
     return mReactNativeHost;
   }
 
-  @Override
-  public void onActivityResult(int requestCode, int resultCode, Intent data) {
-    super.onActivityResult(requestCode, resultCode, data);
-    //probably some other stuff here
-    SendSMSPackage.getInstance().onActivityResult(requestCode, resultCode, data);
-  }
   @Override
   public void onCreate() {
     super.onCreate();

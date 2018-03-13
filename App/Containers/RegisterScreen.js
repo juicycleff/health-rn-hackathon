@@ -81,13 +81,13 @@ export default class RegisterScreen extends Component {
 
     return (
       <View flex>
-      <Image source={Images.background} style={styles.backgroundImage} resizeMode='stretch' />
-            <View center marginT-50>
-                <Text dark10 text50 marginT-40
-                  style={{fontFamily: 'sans-serif-bold', fontWeight: 'bold', marginTop: 30
-                }}>Regsiter with Healthx</Text>
-            </View>
-            <View bottom flex padding-30>
+        <Image source={Images.background} style={styles.backgroundImage} resizeMode='stretch' />
+        <View center marginT-50>
+            <Text dark10 text50 marginT-40
+              style={{fontFamily: 'sans-serif-bold', fontWeight: 'bold', marginTop: 30
+            }}>Regsiter with Healthx</Text>
+        </View>
+        <View bottom flex padding-30>
               <TouchableWithoutFeedback onPress={Keyboard.dismiss}>
                 <View flex>
                   <View style={styles.inputs}>
@@ -138,8 +138,8 @@ export default class RegisterScreen extends Component {
                   </View>
                 </View>
               </TouchableWithoutFeedback>
-            </View>
-          </View>
+        </View>
+      </View>
     )
   }
 }

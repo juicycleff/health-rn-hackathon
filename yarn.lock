@@ -6897,6 +6897,10 @@ react-native-permissions@^1.1.1:
   version "1.1.1"
   resolved "https://registry.yarnpkg.com/react-native-permissions/-/react-native-permissions-1.1.1.tgz#4876004681ff8556454613d85249b01baff9b35b"
 
+react-native-pusher-push-notifications@^1.0.5:
+  version "1.0.5"
+  resolved "https://registry.yarnpkg.com/react-native-pusher-push-notifications/-/react-native-pusher-push-notifications-1.0.5.tgz#a589474562e7a06061e1f0e2e889b8a50b7acd26"
+
 react-native-safe-area-view@^0.6.0:
   version "0.6.0"
   resolved "https://registry.yarnpkg.com/react-native-safe-area-view/-/react-native-safe-area-view-0.6.0.tgz#ce01eb27905a77780219537e0f53fe9c783a8b3d"
@@ -6918,6 +6922,10 @@ react-native-shake-event@^4.0.1:
 react-native-sms@^1.5.2:
   version "1.5.2"
   resolved "https://registry.yarnpkg.com/react-native-sms/-/react-native-sms-1.5.2.tgz#ae383c1f68c26687c670137ea39e32e1e498db63"
+
+react-native-sound@^0.10.8:
+  version "0.10.8"
+  resolved "https://registry.yarnpkg.com/react-native-sound/-/react-native-sound-0.10.8.tgz#07b785b93eca0ba8dc35b841a0d68799d807f515"
 
 react-native-tab-view@^0.0.74:
   version "0.0.74"

@@ -1,4 +1,8 @@
 rootProject.name = 'Healthx'
+include ':react-native-sms'
+project(':react-native-sms').projectDir = new File(rootProject.projectDir, '../node_modules/react-native-sms/android')
+include ':react-native-pusher-push-notifications'
+project(':react-native-pusher-push-notifications').projectDir = new File(rootProject.projectDir, '../node_modules/react-native-pusher-push-notifications/android')
 include ':RNLocation'
 project(':RNLocation').projectDir = new File(rootProject.projectDir, '../node_modules/react-native-location')
 include ':react-native-vector-icons'
