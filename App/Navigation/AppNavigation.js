@@ -1,4 +1,5 @@
 import { StackNavigator } from 'react-navigation'
+import MapScreen from '../Containers/MapScreen'
 import Incidents from '../Containers/Incidents'
 import AboutScreen from '../Containers/AboutScreen'
 import SettingsScreen from '../Containers/SettingsScreen'
@@ -12,6 +13,7 @@ import styles from './Styles/NavigationStyles'
 
 // Manifest of possible screens
 const PrimaryNav = StackNavigator({
+  MapScreen: { screen: MapScreen },
   Incidents: { screen: Incidents },
   AboutScreen: { screen: AboutScreen },
   SettingsScreen: { screen: SettingsScreen },
