@@ -53,7 +53,7 @@
     "react-native-shake-event": "^4.0.1",
     "react-native-sms": "^1.5.2",
     "react-native-sound": "^0.10.8",
-    "react-native-ui-lib": "^3.2.14",
+    "react-native-ui-lib": "^3.3.35",
     "react-native-vector-icons": "^4.5.0",
     "react-navigation": "^1.0.0-beta.21",
     "react-redux": "^5.0.6",
